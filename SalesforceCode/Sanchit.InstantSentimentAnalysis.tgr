@@ -1,0 +1,15 @@
+trigger InstantSentimentAnalysis on FeedItem (after Insert) {
+
+List<Sentimental_Topic__c> sentiTopicList = [select name, Positives__c from Sentimental_Topic__c];
+List<Sentimental_Topic__c> sentiTopicUpdates = new List<Sentimental_Topic__c>();
+List<String> feedItemList = new List<String>();
+System.debug('Sure Shot Comment!!!');
+
+for(FeedItem fi: Trigger.new){
+    if(fi.Body != null){
+        System.debug('fi.Body: ' + fi.Body);
+        feedItemList.add(fi.Body);
+    }    
+}
+InstantSentimentAnalysisHelper.analyzeFeedSentiment(feedItemList);
+}

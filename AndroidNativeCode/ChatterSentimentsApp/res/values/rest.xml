@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="account_type">com.salesforce.ChatterSentimentsApp.login</string>
+	<string name="oauth_callback_url">sfdc://axm/detect/oauth/done</string>
+	<string name="oauth_client_id">3MVG9Y6d_Btp4xp4ZWNs88Z5dFOFqEX.OXRkXiGhURf8_5Q1dTCOTram4frE4e7OWrxqTF5PjwfrA13_PIBeP</string>
+	<string name="api_version">v24.0</string>
+	<string name="encoding">UTF-8</string>
+</resources>
